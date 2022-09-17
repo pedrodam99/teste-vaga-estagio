@@ -4,15 +4,22 @@ import Input from "../Input";
 import Select from "../Select";
 import { useState } from "react";
 
-export default function Form(handleSubmit, companyData) {
-  const [company, setCompany] = useState(companyData || []);
+export default function Form(companyData = {}) {
+  const [company, setCompany] = useState(companyData);
+
+  const getLocalStorage = () =>
+    JSON.parse(localStorage.getItem("database")) ?? [];
+
+  const setLocalStorage = (companyData) =>
+    localStorage.setItem("database", JSON.stringify(companyData));
 
   const submit = (e) => {
     e.preventDefault();
-    const username = e.target.elements.value;
 
-    // handleSubmit(company);
-    console.log(company);
+    const dbProd = getLocalStorage();
+    dbProd.push(company);
+    setLocalStorage(dbProd);
+    console.log("foi");
   };
 
   function handleChange(e) {

@@ -3,13 +3,9 @@ import CompanyTable from "./components/CompanyTable";
 import Form from "./components/Form";
 
 function App() {
-  function createCompany(company) {
-    console.log(company);
-  }
-
   return (
     <div className={module.form_container}>
-      <Form handleSubmit={createCompany} />
+      <Form />
       <CompanyTable></CompanyTable>
     </div>
   );

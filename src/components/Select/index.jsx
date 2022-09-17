@@ -13,7 +13,7 @@ export default function Select({ text, name, options, handleOnChange, value }) {
         onChange={handleOnChange}
         value={value || ""}
       >
-        <option>{text}</option>
+        <option value={text}>{text}</option>
       </select>
     </div>
   );

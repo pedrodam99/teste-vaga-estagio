@@ -9,11 +9,11 @@ export default function Select({ text, name, options, handleOnChange, value }) {
       <select
         name={name}
         id={name}
-        className="bg-indigo-100"
+        className="bg-indigo-100 "
         onChange={handleOnChange}
         value={value || ""}
       >
-        <option value={text}>{text}</option>
+        <option value={text}>{text} </option>
       </select>
     </div>
   );

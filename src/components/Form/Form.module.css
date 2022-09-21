@@ -1,1 +1,5 @@
-
+.form_container {
+  padding: 2em;
+  background-color: white;
+  border: solid 2px #afa9a9;
+}

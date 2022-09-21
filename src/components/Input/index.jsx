@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "./Input.module.css";
 
 export default function Input({ type, text, name, handleOnChange, value }) {
@@ -14,6 +13,7 @@ export default function Input({ type, text, name, handleOnChange, value }) {
         onChange={handleOnChange}
         value={value}
         className="bg-indigo-100"
+        required={true}
       />
     </div>
   );

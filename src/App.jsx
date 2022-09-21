@@ -4,9 +4,9 @@ import Form from "./components/Form";
 
 function App() {
   return (
-    <div className={module.form_container}>
+    <div>
       <Form />
-      <CompanyTable></CompanyTable>
+      <CompanyTable />
     </div>
   );
 }

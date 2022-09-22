@@ -10,6 +10,10 @@ export default function CompanyTable() {
     setEmpresas(db);
   }, []);
 
+  const handleClick = (e) => {
+    console.log(e.target);
+  };
+
   return (
     <div className="mt-10">
       <h1 className="text-2xl my-3 text-indigo-800">Empresas Cadastradas</h1>
@@ -27,7 +31,10 @@ export default function CompanyTable() {
               <td>{empresa.cnpj}</td>
               <td>{empresa.nome_empresa}</td>
               <td>
-                <button className="font-bold text-blue-400 hover:text-blue-900">
+                <button
+                  className="font-bold text-blue-400 hover:text-blue-900"
+                  onClick={handleClick}
+                >
                   Editar
                 </button>
               </td>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./Select.module.css";
 
 export default function Select({ text, name, options, handleOnChange, value }) {
@@ -13,7 +14,13 @@ export default function Select({ text, name, options, handleOnChange, value }) {
         onChange={handleOnChange}
         value={value || ""}
       >
-        <option value={text}>{text} </option>
+        <option value="0">{name}</option>
+        {options &&
+          options.map((uf) => (
+            <option key={uf.id} id={uf.id} value={uf.nome}>
+              {uf.nome}
+            </option>
+          ))}
       </select>
     </div>
   );
